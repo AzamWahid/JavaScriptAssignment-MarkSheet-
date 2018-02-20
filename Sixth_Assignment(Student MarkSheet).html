@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marks Sheet</title>
+</head>
+<body>
+    <script>
+    var firstSub = +prompt("Enter Your First Subject Marks")
+    var secondSub = +prompt("Enter Your Second Subject Marks")
+    var thirdSub = +prompt("Enter Your Third Subject Marks")
+    var total = +prompt("Enter Total Marks")
+
+    var sumOfMarks = (firstSub+secondSub+thirdSub)
+    var per = (sumOfMarks / total * 100).toFixed(2)
+
+    document.write("<h1>MARKS SHEET</h1>")
+    document.write("<h4>Total Marks : "+total+"</h4>")
+    document.write("<h4>Marks Obtained : "+sumOfMarks+"</h4>")
+    document.write("<h4>Percentage : "+per+"</h4>")
+
+    if (per >= 80){
+        document.write("<h4>Grade : A-One</h4>")
+        document.write("<h4>Remarks : Excellent</h4>")
+    }
+    else if (per >= 70){
+        document.write("<h4>Grade : A</h4>")
+        document.write("<h4>Remarks : Good</h4>")
+    }
+    else if (per >= 60){
+        document.write("<h4>Grade : B</h4>")
+        document.write("<h4>Remarks : You Need To Improve</h4>")
+    }
+    else if (per < 60){
+        document.write("<h4>Grade : Fail</h4>")
+        document.write("<h4>Remarks : Sorry</h4>")
+    }
+    </script>
+</body>
+</html>
